@@ -83,6 +83,17 @@ func (ts ConnTestSuite) TestParseStmtArgs(c *C) {
 				make([]interface{}, 1),
 				[][]byte{nil},
 				[]byte{0x0},
+				[]byte{12, 0},
+				[]byte{0x0b, 0xda, 0x07, 0x0a, 0x11, 0x13, 0x1b, 0x1e, 0x00, 0x00, 0x00, 0x00},
+			},
+			nil,
+			"2010-10-17 19:27:30",
+		},
+		{
+			args{
+				make([]interface{}, 1),
+				[][]byte{nil},
+				[]byte{0x0},
 				[]byte{10, 0},
 				[]byte{0x04, 0xda, 0x07, 0x0a, 0x11},
 			},
@@ -133,6 +144,17 @@ func (ts ConnTestSuite) TestParseStmtArgs(c *C) {
 			},
 			nil,
 			"-120 19:27:30.000001",
+		},
+		{
+			args{
+				make([]interface{}, 1),
+				[][]byte{nil},
+				[]byte{0x0},
+				[]byte{11, 0},
+				[]byte{0x0c, 0x01, 0x00, 0x00, 0x00, 0x00, 0x13, 0x1b, 0x1e, 0x00, 0x00, 0x00, 0x00},
+			},
+			nil,
+			"19:27:30.000000",
 		},
 		{
 			args{
