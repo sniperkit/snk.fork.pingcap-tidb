@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,13 +22,14 @@ import (
 	"time"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/session"
-	"github.com/pingcap/tidb/store/mockstore"
-	"github.com/pingcap/tidb/store/mockstore/mocktikv"
-	"github.com/pingcap/tidb/util/testkit"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 var _ = Suite(&testIsolationSuite{})

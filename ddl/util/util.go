@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,12 +23,13 @@ import (
 	"fmt"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/sqlexec"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/sqlexec"
 )
 
 const (

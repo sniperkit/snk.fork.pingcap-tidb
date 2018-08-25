@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,10 +22,11 @@ import (
 	"crypto/tls"
 	"fmt"
 
-	"github.com/pingcap/tidb/util"
-	"github.com/pingcap/tidb/util/auth"
-	"github.com/pingcap/tidb/util/chunk"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/auth"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 // IDriver opens IContext.

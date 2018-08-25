@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,9 +23,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/util/execdetails"
-	"github.com/pingcap/tidb/util/memory"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/execdetails"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/memory"
 )
 
 const (

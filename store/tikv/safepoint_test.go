@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,9 +24,10 @@ import (
 
 	"github.com/juju/errors"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/terror"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 type testSafePointSuite struct {

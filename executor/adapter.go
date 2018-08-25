@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,21 +25,22 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/infoschema"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/plan"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/logutil"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/infoschema"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/plan"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/logutil"
 )
 
 type processinfoSetter interface {

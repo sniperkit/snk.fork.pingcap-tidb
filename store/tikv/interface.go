@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +21,9 @@ package tikv
 import (
 	"time"
 
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/store/tikv/oracle"
-	"github.com/pingcap/tidb/store/tikv/tikvrpc"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/tikvrpc"
 )
 
 // Storage represent the kv.Storage runs on TiKV.

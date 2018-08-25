@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,9 +23,9 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/store/tikv/oracle"
-
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
 )
 
 var errStopped = errors.New("stopped")

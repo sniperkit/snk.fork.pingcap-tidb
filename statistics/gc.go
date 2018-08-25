@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,10 +24,11 @@ import (
 
 	"github.com/cznic/mathutil"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/infoschema"
-	"github.com/pingcap/tidb/store/tikv/oracle"
-	"github.com/pingcap/tidb/util/sqlexec"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/infoschema"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/sqlexec"
 )
 
 // GCStats will garbage collect the useless stats info. For dropped tables, we will first update their version so that

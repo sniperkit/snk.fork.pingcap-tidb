@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package mocktikv
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // BootstrapWithSingleStore initializes a Cluster with 1 Region and 1 Store.
 func BootstrapWithSingleStore(cluster *Cluster) (storeID, peerID, regionID uint64) {

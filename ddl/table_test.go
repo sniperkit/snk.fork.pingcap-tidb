@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,16 +23,17 @@ import (
 
 	"github.com/juju/errors"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/meta"
-	"github.com/pingcap/tidb/meta/autoid"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/table"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/testleak"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta/autoid"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 var _ = Suite(&testTableSuite{})

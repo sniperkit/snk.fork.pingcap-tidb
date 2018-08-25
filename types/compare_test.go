@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +22,10 @@ import (
 	"time"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 var _ = Suite(&testCompareSuite{})

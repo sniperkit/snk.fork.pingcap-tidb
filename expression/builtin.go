@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2013 The ql Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSES/QL-LICENSE file.
@@ -18,15 +23,16 @@
 package expression
 
 import (
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/parser/opcode"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/types/json"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/chunk"
 	"github.com/pingcap/tipb/go-tipb"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/parser/opcode"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types/json"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 // baseBuiltinFunc will be contained in every struct that implement builtinFunc interface.

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +22,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/session"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
 )
 
 // StatsHandler is the handler for dumping statistics.

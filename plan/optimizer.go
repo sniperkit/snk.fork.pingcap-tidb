@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,11 +22,12 @@ import (
 	"math"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/infoschema"
-	"github.com/pingcap/tidb/privilege"
-	"github.com/pingcap/tidb/sessionctx"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/infoschema"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/privilege"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
 )
 
 // AllowCartesianProduct means whether tidb allows cartesian join without equal conditions.

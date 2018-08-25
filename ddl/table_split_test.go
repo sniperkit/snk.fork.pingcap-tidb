@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +20,14 @@ package ddl_test
 
 import (
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/ddl"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/session"
-	"github.com/pingcap/tidb/store/mockstore"
-	"github.com/pingcap/tidb/store/tikv"
-	"github.com/pingcap/tidb/tablecodec"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ddl"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/tablecodec"
 )
 
 type testDDLTableSplitSuite struct{}

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,13 +27,14 @@ import (
 	"time"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/executor"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/store/tikv"
-	"github.com/pingcap/tidb/tablecodec"
-	"github.com/pingcap/tidb/util/testkit"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/executor"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/tablecodec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
 )
 
 // TestIndexDoubleReadClose checks that when a index double read returns before reading all the rows, the goroutine doesn't

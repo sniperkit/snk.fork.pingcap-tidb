@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +20,12 @@ package executor
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/plan"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/chunk"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/plan"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 var (
@@ -137,7 +143,7 @@ func (j *baseJoiner) initDefaultInner(innerTypes []*types.FieldType, defaultInne
 
 func (j *baseJoiner) makeJoinRowToChunk(chk *chunk.Chunk, lhs, rhs chunk.Row) {
 	// Call AppendRow() first to increment the virtual rows.
-	// Fix: https://github.com/pingcap/tidb/issues/5771
+	// Fix: https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/5771
 	chk.AppendRow(lhs)
 	chk.AppendPartialRow(lhs.Len(), rhs)
 }

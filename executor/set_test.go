@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,12 +20,13 @@ package executor_test
 
 import (
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/testkit"
-	"github.com/pingcap/tidb/util/testutil"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testutil"
 )
 
 func (s *testSuite) TestSetVar(c *C) {

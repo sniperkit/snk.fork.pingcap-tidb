@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Copyright 2015 Wenbin Xiao
@@ -21,7 +26,8 @@ import (
 	"testing"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 const (

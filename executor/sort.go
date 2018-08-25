@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,12 +23,13 @@ import (
 	"sort"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/plan"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/memory"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/plan"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/memory"
 )
 
 // SortExec represents sorting executor.

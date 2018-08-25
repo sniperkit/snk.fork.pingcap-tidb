@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,11 +22,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
 )
 
 // ScopeFlag is for system variable whether can be changed in global/session dynamically or not.

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2013 The Go-MySQL-Driver Authors. All rights reserved.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
@@ -50,19 +55,20 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/opentracing/opentracing-go"
-	"github.com/pingcap/tidb/executor"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/metrics"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/arena"
-	"github.com/pingcap/tidb/util/auth"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/hack"
-	"github.com/pingcap/tidb/util/memory"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/executor"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/metrics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/arena"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/auth"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/memory"
 )
 
 const (

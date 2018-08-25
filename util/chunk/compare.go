@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +21,9 @@ package chunk
 import (
 	"sort"
 
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/types/json"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types/json"
 )
 
 // CompareFunc is a function to compare the two values in Row, the two columns must have the same type.

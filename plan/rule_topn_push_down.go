@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +19,7 @@
 package plan
 
 import (
-	"github.com/pingcap/tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
 )
 
 // pushDownTopNOptimizer pushes down the topN or limit. In the future we will remove the limit from `requiredProperty` in CBO phase.

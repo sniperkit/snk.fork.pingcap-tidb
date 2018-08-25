@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,13 +25,14 @@ import (
 
 	gofail "github.com/etcd-io/gofail/runtime"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/session"
-	. "github.com/pingcap/tidb/store/tikv"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/mock"
-	"github.com/pingcap/tidb/util/testkit"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
+	. "github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/mock"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
 )
 
 var _ = Suite(new(testSQLSuite))
@@ -58,11 +64,11 @@ func (s *testSQLSuite) TestFailBusyServerCop(c *C) {
 	var wg sync.WaitGroup
 	wg.Add(2)
 
-	gofail.Enable("github.com/pingcap/tidb/store/mockstore/mocktikv/rpcServerBusy", `return(true)`)
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv/rpcServerBusy", `return(true)`)
 	go func() {
 		defer wg.Done()
 		time.Sleep(time.Millisecond * 100)
-		gofail.Disable("github.com/pingcap/tidb/store/mockstore/mocktikv/rpcServerBusy")
+		gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv/rpcServerBusy")
 	}()
 
 	go func() {

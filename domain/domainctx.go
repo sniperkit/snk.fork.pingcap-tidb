@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package domain
 
-import "github.com/pingcap/tidb/sessionctx"
+import (
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+)
 
 // domainKeyType is a dummy type to avoid naming collision in context.
 type domainKeyType int

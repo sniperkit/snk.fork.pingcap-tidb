@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,8 +25,9 @@ import (
 	"strconv"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/mysql"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
 )
 
 // Global error instances.

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,19 +23,20 @@ import (
 	"testing"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/tablecodec"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/codec"
-	"github.com/pingcap/tidb/util/logutil"
-	"github.com/pingcap/tidb/util/mock"
-	"github.com/pingcap/tidb/util/ranger"
-	"github.com/pingcap/tidb/util/testleak"
 	"github.com/pingcap/tipb/go-tipb"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/tablecodec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/codec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/logutil"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/mock"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/ranger"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 var _ = Suite(&testSuite{})

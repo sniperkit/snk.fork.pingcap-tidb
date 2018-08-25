@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,10 +19,11 @@ package plan
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/table/tables"
-	"github.com/pingcap/tidb/util/ranger"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table/tables"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/ranger"
 )
 
 // partitionProcessor rewrites the ast for table partition.

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,16 +28,17 @@ import (
 	"github.com/juju/errors"
 	"github.com/opentracing/opentracing-go"
 	pb "github.com/pingcap/kvproto/pkg/kvrpcpb"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/metrics"
-	"github.com/pingcap/tidb/sessionctx/binloginfo"
-	"github.com/pingcap/tidb/store/tikv/tikvrpc"
-	"github.com/pingcap/tidb/tablecodec"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/goroutine_pool"
 	binlog "github.com/pingcap/tipb/go-binlog"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/metrics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/binloginfo"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/tikvrpc"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/tablecodec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/goroutine_pool"
 )
 
 type twoPhaseCommitAction int

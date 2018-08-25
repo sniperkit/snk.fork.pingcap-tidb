@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +21,7 @@ package util
 import (
 	"fmt"
 
-	"github.com/pingcap/tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
 )
 
 // Event is an event that a ddl operation happened.

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +25,8 @@ import (
 	"sort"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/store/mockstore/mocktikv"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv"
 )
 
 type testDeleteRangeSuite struct {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +19,7 @@
 package server
 
 import (
-	"github.com/pingcap/tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
 )
 
 // ColumnInfo contains information of a column

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +21,8 @@ package types
 import (
 	"github.com/cznic/mathutil"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/parser/opcode"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/parser/opcode"
 )
 
 // ComputePlus computes the result of a+b.

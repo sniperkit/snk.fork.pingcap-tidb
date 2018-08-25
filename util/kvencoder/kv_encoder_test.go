@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,21 +25,21 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/tidb/meta/autoid"
-	"github.com/pingcap/tidb/store/mockstore"
-
 	"github.com/juju/errors"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/session"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/structure"
-	"github.com/pingcap/tidb/tablecodec"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/codec"
-	"github.com/pingcap/tidb/util/testkit"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta/autoid"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/structure"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/tablecodec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/codec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 var _ = Suite(&testKvEncoderSuite{})

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +20,12 @@ package server
 
 import (
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/charset"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
 )
 
 type tidbResultSetTestSuite struct{}
@@ -43,7 +49,7 @@ func createColumnByTypeAndLen(tp byte, len uint32) *ColumnInfo {
 	}
 }
 func (ts tidbResultSetTestSuite) TestConvertColumnInfo(c *C) {
-	// Test "mysql.TypeBit", for: https://github.com/pingcap/tidb/issues/5405.
+	// Test "mysql.TypeBit", for: https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/5405.
 	resultField := ast.ResultField{
 		Column: &model.ColumnInfo{
 			Name:   model.NewCIStr("a"),
@@ -66,7 +72,7 @@ func (ts tidbResultSetTestSuite) TestConvertColumnInfo(c *C) {
 	colInfo := convertColumnInfo(&resultField)
 	c.Assert(colInfo, DeepEquals, createColumnByTypeAndLen(mysql.TypeBit, 1))
 
-	// Test "mysql.TypeTiny", for: https://github.com/pingcap/tidb/issues/5405.
+	// Test "mysql.TypeTiny", for: https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/5405.
 	resultField = ast.ResultField{
 		Column: &model.ColumnInfo{
 			Name:   model.NewCIStr("a"),

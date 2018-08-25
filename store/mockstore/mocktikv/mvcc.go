@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +28,8 @@ import (
 	"github.com/google/btree"
 	"github.com/juju/errors"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
-	"github.com/pingcap/tidb/util/codec"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/codec"
 )
 
 type mvccValueType int

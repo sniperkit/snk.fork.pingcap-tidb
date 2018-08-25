@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +20,10 @@ package ddl
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/infoschema"
-	"github.com/pingcap/tidb/meta"
-	"github.com/pingcap/tidb/model"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/infoschema"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
 )
 
 func onCreateForeignKey(t *meta.Meta, job *model.Job) (ver int64, _ error) {

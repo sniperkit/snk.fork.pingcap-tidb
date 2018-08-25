@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,10 +27,11 @@ import (
 	pb "github.com/pingcap/kvproto/pkg/kvrpcpb"
 	"github.com/pingcap/kvproto/pkg/metapb"
 	"github.com/pingcap/pd/pd-client"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/store/mockoracle"
-	"github.com/pingcap/tidb/store/tikv/tikvrpc"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/mockoracle"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/tikvrpc"
 )
 
 var errStopped = errors.New("stopped")

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +28,11 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/metrics"
-	"github.com/pingcap/tidb/owner"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/metrics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/owner"
 )
 
 const (

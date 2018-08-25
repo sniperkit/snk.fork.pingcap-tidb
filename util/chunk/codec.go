@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,8 +24,9 @@ import (
 	"unsafe"
 
 	"github.com/cznic/mathutil"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/types"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
 )
 
 // Codec is used to:

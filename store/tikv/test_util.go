@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,8 +21,9 @@ package tikv
 import (
 	"github.com/juju/errors"
 	"github.com/pingcap/pd/pd-client"
-	"github.com/pingcap/tidb/kv"
 	"github.com/twinj/uuid"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
 )
 
 // NewTestTiKVStore creates a test store with Option

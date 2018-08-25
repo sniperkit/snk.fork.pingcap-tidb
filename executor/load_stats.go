@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,11 +22,12 @@ import (
 	"encoding/json"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/statistics"
-	"github.com/pingcap/tidb/util/chunk"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/statistics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 var _ Executor = &LoadStatsExec{}

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package ast
 
-import "github.com/pingcap/tidb/types"
+import (
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+)
 
 // node is the struct implements node interface except for Accept method.
 // Node implementations should embed it in.

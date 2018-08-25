@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,8 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/tidb/store/tikv/oracle"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
 )
 
 var _ oracle.Oracle = &localOracle{}

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +19,8 @@
 package perfschema
 
 import (
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
 )
 
 // perfSchema is used for tables in performance_schema.

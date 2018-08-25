@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,10 +23,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/util/israce"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/israce"
 )
 
 // Version information.

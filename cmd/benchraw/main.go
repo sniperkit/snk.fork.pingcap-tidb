@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +28,11 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/store/tikv"
-	"github.com/pingcap/tidb/terror"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 var (

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,17 +24,18 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/meta/autoid"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/privilege"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/table"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/sqlexec"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta/autoid"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/privilege"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/sqlexec"
 )
 
 const (
@@ -1006,24 +1012,24 @@ func dataForTableConstraints(schemas []*model.DBInfo) [][]types.Datum {
 func dataForPseudoProfiling() [][]types.Datum {
 	var rows [][]types.Datum
 	row := types.MakeDatums(
-		0,  // QUERY_ID
-		0,  // SEQ
-		"", // STATE
+		0,                      // QUERY_ID
+		0,                      // SEQ
+		"",                     // STATE
 		types.NewDecFromInt(0), // DURATION
 		types.NewDecFromInt(0), // CPU_USER
 		types.NewDecFromInt(0), // CPU_SYSTEM
-		0, // CONTEXT_VOLUNTARY
-		0, // CONTEXT_INVOLUNTARY
-		0, // BLOCK_OPS_IN
-		0, // BLOCK_OPS_OUT
-		0, // MESSAGES_SENT
-		0, // MESSAGES_RECEIVED
-		0, // PAGE_FAULTS_MAJOR
-		0, // PAGE_FAULTS_MINOR
-		0, // SWAPS
-		0, // SOURCE_FUNCTION
-		0, // SOURCE_FILE
-		0, // SOURCE_LINE
+		0,                      // CONTEXT_VOLUNTARY
+		0,                      // CONTEXT_INVOLUNTARY
+		0,                      // BLOCK_OPS_IN
+		0,                      // BLOCK_OPS_OUT
+		0,                      // MESSAGES_SENT
+		0,                      // MESSAGES_RECEIVED
+		0,                      // PAGE_FAULTS_MAJOR
+		0,                      // PAGE_FAULTS_MINOR
+		0,                      // SWAPS
+		0,                      // SOURCE_FUNCTION
+		0,                      // SOURCE_FILE
+		0,                      // SOURCE_LINE
 	)
 	rows = append(rows, row)
 	return rows

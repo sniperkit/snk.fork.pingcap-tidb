@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,11 +28,12 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	gofail "github.com/etcd-io/gofail/runtime"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/logutil"
-	"github.com/pingcap/tidb/util/testleak"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/logutil"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 func TestT(t *testing.T) {
@@ -76,7 +82,7 @@ func (s *testSuite) TestFailNewSession(c *C) {
 				cli.Close()
 			}
 		}()
-		gofail.Enable("github.com/pingcap/tidb/owner/closeClient", `return(true)`)
+		gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/owner/closeClient", `return(true)`)
 		_, err = NewSession(context.Background(), "fail_new_serssion", cli, retryCnt, ManagerSessionTTL)
 		isContextDone := terror.ErrorEqual(grpc.ErrClientConnClosing, err) || terror.ErrorEqual(context.Canceled, err)
 		c.Assert(isContextDone, IsTrue, Commentf("err %v", err))
@@ -92,7 +98,7 @@ func (s *testSuite) TestFailNewSession(c *C) {
 				cli.Close()
 			}
 		}()
-		gofail.Enable("github.com/pingcap/tidb/owner/closeGrpc", `return(true)`)
+		gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/owner/closeGrpc", `return(true)`)
 		_, err = NewSession(context.Background(), "fail_new_serssion", cli, retryCnt, ManagerSessionTTL)
 		isContextDone := terror.ErrorEqual(grpc.ErrClientConnClosing, err) || terror.ErrorEqual(context.Canceled, err)
 		c.Assert(isContextDone, IsTrue, Commentf("err %v", err))

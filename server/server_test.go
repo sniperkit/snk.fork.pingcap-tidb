@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,11 +32,12 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/kv"
-	tmysql "github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/util/logutil"
-	"github.com/pingcap/tidb/util/printer"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	tmysql "github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/logutil"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/printer"
 )
 
 func TestT(t *testing.T) {

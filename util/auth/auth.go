@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,7 +25,8 @@ import (
 	"fmt"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/terror"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 // UserIdentity represents username and hostname.

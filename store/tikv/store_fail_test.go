@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,11 +38,11 @@ func (s *testStoreSuite) TestFailBusyServerKV(c *C) {
 	var wg sync.WaitGroup
 	wg.Add(2)
 
-	gofail.Enable("github.com/pingcap/tidb/store/mockstore/mocktikv/rpcServerBusy", `return(true)`)
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv/rpcServerBusy", `return(true)`)
 	go func() {
 		defer wg.Done()
 		time.Sleep(time.Millisecond * 100)
-		gofail.Disable("github.com/pingcap/tidb/store/mockstore/mocktikv/rpcServerBusy")
+		gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/store/mockstore/mocktikv/rpcServerBusy")
 	}()
 
 	go func() {

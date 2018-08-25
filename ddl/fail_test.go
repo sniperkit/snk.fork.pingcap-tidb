@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,10 +21,11 @@ package ddl
 import (
 	gofail "github.com/etcd-io/gofail/runtime"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/types"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
 )
 
 func (s *testColumnChangeSuite) TestFailBeforeDecodeArgs(c *C) {
@@ -49,10 +55,10 @@ func (s *testColumnChangeSuite) TestFailBeforeDecodeArgs(c *C) {
 			stateCnt++
 		} else if job.SchemaState == model.StateWriteReorganization {
 			if first {
-				gofail.Enable("github.com/pingcap/tidb/ddl/errorBeforeDecodeArgs", `return(true)`)
+				gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/errorBeforeDecodeArgs", `return(true)`)
 				first = false
 			} else {
-				gofail.Disable("github.com/pingcap/tidb/ddl/errorBeforeDecodeArgs")
+				gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/errorBeforeDecodeArgs")
 			}
 		}
 	}

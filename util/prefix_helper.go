@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2014 The ql Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSES/QL-LICENSE file.
@@ -21,7 +26,8 @@ import (
 	"bytes"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/kv"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
 )
 
 // ScanMetaWithPrefix scans metadata with the prefix.

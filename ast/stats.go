@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package ast
 
-import "github.com/pingcap/tidb/model"
+import (
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+)
 
 var (
 	_ StmtNode = &AnalyzeTableStmt{}

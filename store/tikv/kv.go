@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,16 +31,17 @@ import (
 	"github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/juju/errors"
 	"github.com/pingcap/pd/pd-client"
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/metrics"
-	"github.com/pingcap/tidb/store/tikv/latch"
-	"github.com/pingcap/tidb/store/tikv/oracle"
-	"github.com/pingcap/tidb/store/tikv/oracle/oracles"
-	"github.com/pingcap/tidb/store/tikv/tikvrpc"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/metrics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/latch"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle/oracles"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/tikvrpc"
 )
 
 type storeCache struct {

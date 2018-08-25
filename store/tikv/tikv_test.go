@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +26,8 @@ import (
 	"strings"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/parser"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/parser"
 )
 
 // OneByOneSuite is a suite, When with-tikv flag is true, there is only one storage, so the test suite have to run one by one.

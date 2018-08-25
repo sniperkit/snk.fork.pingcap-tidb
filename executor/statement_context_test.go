@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,9 +23,10 @@ import (
 	"unicode/utf8"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/table"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/testkit"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
 )
 
 const (

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package mocktikv
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // ErrLocked is returned when trying to Read/Write on a locked key. Client should
 // backoff or cleanup the lock then retry.

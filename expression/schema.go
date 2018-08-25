@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +22,8 @@ import (
 	"strings"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/ast"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
 )
 
 // KeyInfo stores the columns of one unique key or primary key.

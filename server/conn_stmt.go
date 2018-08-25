@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2013 The Go-MySQL-Driver Authors. All rights reserved.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
@@ -41,9 +46,10 @@ import (
 	"strconv"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/util/hack"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
 )
 
 func (cc *clientConn) handleStmtPrepare(sql string) error {

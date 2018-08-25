@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +22,8 @@ import (
 	"fmt"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/model"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
 )
 
 // generateKeys4Schema will generate keys for a given schema. Used only in this file.

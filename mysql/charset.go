@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package mysql
 
-import "unicode"
+import (
+	"unicode"
+)
 
 // CharsetIDs maps charset name to its default collation ID.
 var CharsetIDs = map[string]uint8{

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,7 +22,8 @@ import (
 	"time"
 
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
 )
 
 func (s *testStatisticsSuite) TestSketch(c *C) {

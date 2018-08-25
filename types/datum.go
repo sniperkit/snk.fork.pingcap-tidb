@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,12 +28,13 @@ import (
 	"unicode/utf8"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/types/json"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/hack"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types/json"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
 )
 
 // Kind constants.
@@ -1128,8 +1134,8 @@ func ProduceDecWithSpecifiedTp(dec *MyDecimal, tp *FieldType, sc *stmtctx.Statem
 			}
 			if !dec.IsZero() && frac > decimal && dec.Compare(&old) != 0 {
 				if sc.InInsertStmt || sc.InUpdateOrDeleteStmt {
-					// fix https://github.com/pingcap/tidb/issues/3895
-					// fix https://github.com/pingcap/tidb/issues/5532
+					// fix https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/3895
+					// fix https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/5532
 					sc.AppendWarning(ErrTruncated)
 					err = nil
 				} else {

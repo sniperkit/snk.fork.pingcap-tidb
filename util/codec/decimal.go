@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +20,8 @@ package codec
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/types"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
 )
 
 // EncodeDecimal encodes a decimal into a byte slice which can be sorted lexicographically later.

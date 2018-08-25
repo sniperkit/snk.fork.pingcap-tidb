@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +20,14 @@ package executor
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/table"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/chunk"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 // UpdateExec represents a new update executor.
@@ -105,7 +111,7 @@ func (e *UpdateExec) exec(schema *expression.Schema) ([]types.Datum, error) {
 // outer join: the outer row can not match any inner rows, and in this scenario
 // the inner handle field is filled with a NULL value.
 //
-// This fixes: https://github.com/pingcap/tidb/issues/7176.
+// This fixes: https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/7176.
 func (e *UpdateExec) canNotUpdate(handle types.Datum) bool {
 	return handle.IsNull()
 }

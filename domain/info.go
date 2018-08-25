@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,14 +26,15 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/ddl"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/owner"
-	"github.com/pingcap/tidb/util/hack"
-	"github.com/pingcap/tidb/util/printer"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ddl"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/owner"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/printer"
 )
 
 const (

@@ -1,10 +1,13 @@
+# Sniperkit-Bot
+# - Status: analyzed
+
 version: 2
 
 jobs:
   build:
     docker:
       - image: golang:1.10
-    working_directory: /go/src/github.com/pingcap/tidb
+    working_directory: /go/src/github.com/sniperkit/snk.fork.pingcap-tidb
     steps:
       - checkout
       - run:

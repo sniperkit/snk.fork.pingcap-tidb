@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,17 +26,18 @@ import (
 
 	"github.com/juju/errors"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/mock"
-	"github.com/pingcap/tidb/util/testleak"
-	"github.com/pingcap/tidb/util/testutil"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/mock"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testutil"
 )
 
 func (s *testEvaluatorSuite) TestDate(c *C) {
@@ -442,7 +448,7 @@ func (s *testEvaluatorSuite) TestDayOfYear(c *C) {
 func (s *testEvaluatorSuite) TestDateFormat(c *C) {
 	defer testleak.AfterTest(c)()
 
-	// Test case for https://github.com/pingcap/tidb/issues/2908
+	// Test case for https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/2908
 	// SELECT DATE_FORMAT(null,'%Y-%M-%D')
 	args := []types.Datum{types.NewDatum(nil), types.NewStringDatum("%Y-%M-%D")}
 	fc := funcs[ast.DateFormat]
@@ -1431,7 +1437,7 @@ func (s *testEvaluatorSuite) TestUnixTimestamp(c *C) {
 	c.Assert(d.GetInt64()-time.Now().Unix(), GreaterEqual, int64(-1))
 	c.Assert(d.GetInt64()-time.Now().Unix(), LessEqual, int64(1))
 
-	// https://github.com/pingcap/tidb/issues/2496
+	// https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/2496
 	// Test UNIX_TIMESTAMP(NOW()).
 	now, isNull, err := evalNowWithFsp(s.ctx, 0)
 	c.Assert(err, IsNil)
@@ -1447,7 +1453,7 @@ func (s *testEvaluatorSuite) TestUnixTimestamp(c *C) {
 	c.Assert(val-time.Now().Unix(), GreaterEqual, int64(-1))
 	c.Assert(val-time.Now().Unix(), LessEqual, int64(1))
 
-	// https://github.com/pingcap/tidb/issues/2852
+	// https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/2852
 	// Test UNIX_TIMESTAMP(NULL).
 	args = []types.Datum{types.NewDatum(nil)}
 	f, err = fc.getFunction(s.ctx, s.datumsToConstants(args))

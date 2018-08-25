@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2013 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
@@ -37,7 +42,7 @@ func interestingGoroutines() (gs []string) {
 		}
 		stack := strings.TrimSpace(sl[1])
 		if stack == "" ||
-			strings.Contains(stack, "created by github.com/pingcap/tidb.init") ||
+			strings.Contains(stack, "created by github.com/sniperkit/snk.fork.pingcap-tidb.init") ||
 			strings.Contains(stack, "testing.RunTests") ||
 			strings.Contains(stack, "check.(*resultTracker).start") ||
 			strings.Contains(stack, "check.(*suiteRunner).runFunc") ||

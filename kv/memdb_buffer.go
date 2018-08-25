@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Copyright 2015 Wenbin Xiao
@@ -24,7 +29,8 @@ import (
 	"github.com/pingcap/goleveldb/leveldb/iterator"
 	"github.com/pingcap/goleveldb/leveldb/memdb"
 	"github.com/pingcap/goleveldb/leveldb/util"
-	"github.com/pingcap/tidb/terror"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 // memDbBuffer implements the MemBuffer interface.

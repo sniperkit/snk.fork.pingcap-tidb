@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,7 +23,8 @@ import (
 	"unicode/utf8"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/util/hack"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
 )
 
 // ErrSyntax indicates that a value does not have the right syntax for the target type.

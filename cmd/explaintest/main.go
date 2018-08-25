@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +21,7 @@ package main
 import (
 	"bytes"
 	"database/sql"
+	"flag"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -23,17 +29,17 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"time"
 
-	"flag"
 	"github.com/go-sql-driver/mysql"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/session"
-	"github.com/pingcap/tidb/sessionctx"
-	"github.com/pingcap/tidb/util/logutil"
-	"github.com/pingcap/tidb/util/mock"
 	log "github.com/sirupsen/logrus"
-	"time"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/session"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/logutil"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/mock"
 )
 
 const dbName = "test"

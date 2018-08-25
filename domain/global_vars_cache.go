@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,8 +22,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 // GlobalVariableCache caches global variables.

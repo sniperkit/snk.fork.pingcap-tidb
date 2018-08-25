@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,12 +26,13 @@ import (
 
 	gofail "github.com/etcd-io/gofail/runtime"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/kv"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/util/codec"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/codec"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 func TestT(t *testing.T) {
@@ -282,8 +288,8 @@ func (s *testTableCodecSuite) TestCutKey(c *C) {
 }
 
 func (s *testTableCodecSuite) TestDecodeBadDecical(c *C) {
-	gofail.Enable("github.com/pingcap/tidb/util/codec/errorInDecodeDecimal", `return(true)`)
-	defer gofail.Disable("github.com/pingcap/tidb/util/codec/errorInDecodeDecimal")
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/util/codec/errorInDecodeDecimal", `return(true)`)
+	defer gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/util/codec/errorInDecodeDecimal")
 	dec := types.NewDecFromStringForTest("0.111")
 	b, err := codec.EncodeDecimal(nil, dec, 0, 0)
 	c.Assert(err, IsNil)

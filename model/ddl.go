@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +26,8 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/terror"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 // ActionType is the type for DDL action.

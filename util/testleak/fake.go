@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +19,9 @@
 
 package testleak
 
-import "github.com/pingcap/check"
+import (
+	"github.com/pingcap/check"
+)
 
 // BeforeTest is a dummy implementation when build tag 'leak' is not set.
 func BeforeTest() {

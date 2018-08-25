@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +19,10 @@
 package mock
 
 import (
-	"github.com/pingcap/tidb/kv"
 	"github.com/pingcap/tipb/go-tipb"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
 )
 
 // Client implement kv.Client interface, mocked from "CopClient" defined in

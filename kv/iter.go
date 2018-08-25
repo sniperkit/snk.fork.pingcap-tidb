@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +18,9 @@
 
 package kv
 
-import "github.com/juju/errors"
+import (
+	"github.com/juju/errors"
+)
 
 // NextUntil applies FnKeyCmp to each entry of the iterator until meets some condition.
 // It will stop when fn returns true, or iterator is invalid or an error occurs.

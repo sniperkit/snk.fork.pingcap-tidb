@@ -1,6 +1,9 @@
+# Sniperkit-Bot
+# - Status: analyzed
+
 language: go
 
-go_import_path: github.com/pingcap/tidb
+go_import_path: github.com/sniperkit/snk.fork.pingcap-tidb
 
 go:
   - "1.10"

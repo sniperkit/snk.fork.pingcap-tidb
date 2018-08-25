@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // The MIT License (MIT)
 //
 // Copyright (c) 2014 wandoulabs
@@ -39,18 +44,20 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+
 	// For pprof
 	_ "net/http/pprof"
 
 	"github.com/blacktear23/go-proxyprotocol"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/config"
-	"github.com/pingcap/tidb/metrics"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/config"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/metrics"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util"
 )
 
 var (

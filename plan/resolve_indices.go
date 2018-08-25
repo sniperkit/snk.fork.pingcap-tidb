@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,8 +19,8 @@
 package plan
 
 import (
-	"github.com/pingcap/tidb/expression"
-	"github.com/pingcap/tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/expression"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
 )
 
 // ResolveIndices implements Plan interface.

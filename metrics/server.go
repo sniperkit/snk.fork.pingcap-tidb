@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,8 +22,9 @@ import (
 	"strconv"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/terror"
 	"github.com/prometheus/client_golang/prometheus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
 )
 
 // Metrics

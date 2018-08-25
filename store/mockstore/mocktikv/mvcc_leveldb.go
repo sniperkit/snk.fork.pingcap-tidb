@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,9 +30,10 @@ import (
 	"github.com/pingcap/goleveldb/leveldb/storage"
 	"github.com/pingcap/goleveldb/leveldb/util"
 	"github.com/pingcap/kvproto/pkg/kvrpcpb"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/codec"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/codec"
 )
 
 // MVCCLevelDB implements the MVCCStore interface.

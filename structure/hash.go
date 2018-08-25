@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +24,8 @@ import (
 	"strconv"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/kv"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/kv"
 )
 
 // HashPair is the pair for (field, value) in a hash.

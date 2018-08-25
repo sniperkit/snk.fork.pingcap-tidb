@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,22 +28,23 @@ import (
 
 	"github.com/cznic/mathutil"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/infoschema"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/privilege"
-	"github.com/pingcap/tidb/sessionctx/stmtctx"
-	"github.com/pingcap/tidb/sessionctx/variable"
-	"github.com/pingcap/tidb/table"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/types"
-	"github.com/pingcap/tidb/types/json"
-	"github.com/pingcap/tidb/util/auth"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/chunk"
-	"github.com/pingcap/tidb/util/format"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/infoschema"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/privilege"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/stmtctx"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/sessionctx/variable"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/table"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/types/json"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/auth"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/format"
 )
 
 // ShowExec represents a show executor.
@@ -356,19 +362,19 @@ func (e *ShowExec) fetchShowIndex() error {
 				subPart = col.Length
 			}
 			e.appendRow([]interface{}{
-				tb.Meta().Name.O,  // Table
-				nonUniq,           // Non_unique
-				idx.Meta().Name.O, // Key_name
-				i + 1,             // Seq_in_index
-				col.Name.O,        // Column_name
-				"A",               // Collation
-				0,                 // Cardinality
-				subPart,           // Sub_part
-				nil,               // Packed
-				"YES",             // Null
+				tb.Meta().Name.O,       // Table
+				nonUniq,                // Non_unique
+				idx.Meta().Name.O,      // Key_name
+				i + 1,                  // Seq_in_index
+				col.Name.O,             // Column_name
+				"A",                    // Collation
+				0,                      // Cardinality
+				subPart,                // Sub_part
+				nil,                    // Packed
+				"YES",                  // Null
 				idx.Meta().Tp.String(), // Index_type
-				"",                 // Comment
-				idx.Meta().Comment, // Index_comment
+				"",                     // Comment
+				idx.Meta().Comment,     // Index_comment
 			})
 		}
 	}

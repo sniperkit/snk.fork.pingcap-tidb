@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,8 +27,9 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/mysql"
 	log "github.com/sirupsen/logrus"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
 )
 
 func intRangeValue(column *column, min int64, max int64) (int64, int64) {

@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +20,8 @@ package variable_test
 
 import (
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/util/mock"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/mock"
 )
 
 var _ = Suite(&testSessionSuite{})

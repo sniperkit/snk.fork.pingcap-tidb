@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,7 +28,8 @@ import (
 	"unsafe"
 
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/util/hack"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/hack"
 )
 
 // Type returns type of BinaryJSON as string.

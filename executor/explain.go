@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +20,9 @@ package executor
 
 import (
 	"github.com/cznic/mathutil"
-	"github.com/pingcap/tidb/util/chunk"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/chunk"
 )
 
 // ExplainExec represents an explain executor.

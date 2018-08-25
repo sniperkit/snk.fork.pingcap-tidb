@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +21,7 @@ package kvenc
 import (
 	"sync/atomic"
 
-	"github.com/pingcap/tidb/meta/autoid"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/meta/autoid"
 )
 
 var _ autoid.Allocator = &Allocator{}

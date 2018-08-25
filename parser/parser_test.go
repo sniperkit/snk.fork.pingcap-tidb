@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2015 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,11 +26,12 @@ import (
 
 	"github.com/juju/errors"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/ast"
-	"github.com/pingcap/tidb/mysql"
-	"github.com/pingcap/tidb/terror"
-	"github.com/pingcap/tidb/util/charset"
-	"github.com/pingcap/tidb/util/testleak"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/ast"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/mysql"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/terror"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/charset"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testleak"
 )
 
 func TestT(t *testing.T) {
@@ -118,7 +124,7 @@ func (s *testParserSuite) TestSimple(c *C) {
 
 	// Testcase for /*! xx */
 	// See http://dev.mysql.com/doc/refman/5.7/en/comments.html
-	// Fix: https://github.com/pingcap/tidb/issues/971
+	// Fix: https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/971
 	src = "/*!40101 SET character_set_client = utf8 */;"
 	stmts, err = parser.Parse(src, "", "")
 	c.Assert(err, IsNil)
@@ -467,10 +473,10 @@ func (s *testParserSuite) TestDMLStmt(c *C) {
 		{"select 1 as a from dual where 1 < any (select 2) order by a", true},
 		{"select 1 order by 1", true},
 
-		// for https://github.com/pingcap/tidb/issues/320
+		// for https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/320
 		{`(select 1);`, true},
 
-		// for https://github.com/pingcap/tidb/issues/1050
+		// for https://github.com/sniperkit/snk.fork.pingcap-tidb/issues/1050
 		{`SELECT /*!40001 SQL_NO_CACHE */ * FROM test WHERE 1 limit 0, 2000;`, true},
 
 		{`ANALYZE TABLE t`, true},

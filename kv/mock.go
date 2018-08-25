@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +20,9 @@ package kv
 
 import (
 	"github.com/juju/errors"
-	"github.com/pingcap/tidb/store/tikv/oracle"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/store/tikv/oracle"
 )
 
 // mockTxn is a txn that returns a retryAble error when called Commit.

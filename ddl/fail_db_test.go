@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2018 PingCAP, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,10 +23,11 @@ import (
 
 	gofail "github.com/etcd-io/gofail/runtime"
 	. "github.com/pingcap/check"
-	"github.com/pingcap/tidb/domain"
-	"github.com/pingcap/tidb/model"
-	"github.com/pingcap/tidb/util/testkit"
 	"golang.org/x/net/context"
+
+	"github.com/sniperkit/snk.fork.pingcap-tidb/domain"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/model"
+	"github.com/sniperkit/snk.fork.pingcap-tidb/util/testkit"
 )
 
 // TestInitializeOffsetAndState tests the case that the column's offset and state don't be initialized in the file of ddl_api.go when
@@ -33,15 +39,15 @@ func (s *testStateChangeSuite) TestInitializeOffsetAndState(c *C) {
 	c.Assert(err, IsNil)
 	defer s.se.Execute(context.Background(), "drop table t")
 
-	gofail.Enable("github.com/pingcap/tidb/ddl/uninitializedOffsetAndState", `return(true)`)
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/uninitializedOffsetAndState", `return(true)`)
 	_, err = s.se.Execute(context.Background(), "ALTER TABLE t MODIFY COLUMN b int FIRST;")
 	c.Assert(err, IsNil)
-	gofail.Disable("github.com/pingcap/tidb/ddl/uninitializedOffsetAndState")
+	gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/uninitializedOffsetAndState")
 }
 
 func (s *testDBSuite) TestUpdateHandleFailed(c *C) {
-	gofail.Enable("github.com/pingcap/tidb/ddl/errorUpdateReorgHandle", `return(true)`)
-	defer gofail.Disable("github.com/pingcap/tidb/ddl/errorUpdateReorgHandle")
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/errorUpdateReorgHandle", `return(true)`)
+	defer gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/errorUpdateReorgHandle")
 	tk := testkit.NewTestKit(c, s.store)
 	tk.MustExec("create database if not exists test_handle_failed")
 	defer tk.MustExec("drop database test_handle_failed")
@@ -55,8 +61,8 @@ func (s *testDBSuite) TestUpdateHandleFailed(c *C) {
 }
 
 func (s *testDBSuite) TestAddIndexFailed(c *C) {
-	gofail.Enable("github.com/pingcap/tidb/ddl/mockAddIndexErr", `return(true)`)
-	defer gofail.Disable("github.com/pingcap/tidb/ddl/mockAddIndexErr")
+	gofail.Enable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/mockAddIndexErr", `return(true)`)
+	defer gofail.Disable("github.com/sniperkit/snk.fork.pingcap-tidb/ddl/mockAddIndexErr")
 	tk := testkit.NewTestKit(c, s.store)
 	tk.MustExec("create database if not exists test_add_index_failed")
 	defer tk.MustExec("drop database test_add_index_failed")
